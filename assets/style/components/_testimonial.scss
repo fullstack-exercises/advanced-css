@@ -1,0 +1,54 @@
+// testimonial
+.testimonial {
+    width: 350px;
+    background-color: $color-white;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 13px 3px rgba(112, 112, 112, 0.3);
+    -moz-box-shadow: 0px 0px 13px 3px rgba(112, 112, 112, 0.3);
+    box-shadow: 0px 0px 13px 3px rgba(112, 112, 112, 0.3);
+    line-height: 1.6;
+    &__text {
+        padding: $space-xl $space-xl 80px $space-xl;
+        color: $color-dark-grey;
+        font-weight: 500;
+        font-size: $font-size-m;
+        p {
+            margin: 0;
+        }
+    }
+    &__author {
+        padding: 70px $space-xl $space-xl $space-xl;
+        background-color: $color-blue;
+        border-radius: 0px 0px 10px 10px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        &-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            object-fit: cover;
+            position: absolute;
+            top: -60px;
+            border: 5px solid $color-white;
+        }
+        &-name {
+            color: $color-white;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: $font-size-l;
+            margin: 0;
+        }
+        &-site {
+            color: $color-light-purple;
+            font-weight: 600;
+            transition: color 0.3s ease-in-out;
+            &:hover {
+                color: $color-white;
+            }
+        }
+    }
+}
