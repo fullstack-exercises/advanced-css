@@ -1,0 +1,34 @@
+// All styling is mobile first
+// Tablet
+@media screen and (min-width: 480px) {}
+
+// Laptop
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+        .testimonial {
+            grid-column: 1/3;
+            &:nth-child(even) {
+                grid-column: 3/5;
+            }
+        }
+    }
+}
+
+// Desktop
+@media screen and (min-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        .testimonial {
+            &:nth-child(3n + 1) {
+                grid-column: 1/2;
+            }
+            &:nth-child(3n + 2) {
+                grid-column: 2/3;
+            }
+            &:nth-child(3n + 3) {
+                grid-column: 3/4;
+            }
+        }
+    }
+}

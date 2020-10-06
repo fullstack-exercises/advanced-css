@@ -1,12 +1,17 @@
 // testimonial
 .testimonial {
-    width: 350px;
+    grid-column: 1/-1;
+    width: 100%;
     background-color: $color-white;
     border-radius: 10px;
     -webkit-box-shadow: 0px 0px 13px 3px rgba(112, 112, 112, 0.3);
     -moz-box-shadow: 0px 0px 13px 3px rgba(112, 112, 112, 0.3);
     box-shadow: 0px 0px 13px 3px rgba(112, 112, 112, 0.3);
     line-height: 1.6;
+    justify-self: center;
+    margin-bottom: $space-s;
+    transition: all 0.3s ease-in-out;
+    position: relative;
     &__text {
         padding: $space-xl $space-xl 80px $space-xl;
         color: $color-dark-grey;
@@ -48,6 +53,36 @@
             transition: color 0.3s ease-in-out;
             &:hover {
                 color: $color-white;
+            }
+        }
+    }
+    &__overlay {
+        border-radius: 10px;
+        content: "";
+        color: $color-white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        transition: 0.5s;
+        &:hover {
+            background-color: $color-blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &::after {
+                content: "Read more";
+                cursor: pointer;
+                background-color: $color-white;
+                color: $color-blue;
+                padding: 8px $space;
+                border-radius: 20px;
+                &:hover {
+                    border: 1px solid $color-white;
+                    background-color: transparent;
+                }
             }
         }
     }
