@@ -190,4 +190,106 @@ footer {
   border: 1px solid #ffffff;
   background-color: transparent;
 }
+
+.socials {
+  background-color: #ffffff;
+  color: #686de0;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  width: 50px;
+  height: 260px;
+  z-index: 10;
+  border-radius: 20px 0px 0px 20px;
+  -webkit-box-shadow: 0px 0px 13px 3px rgba(112, 112, 112, 0.3);
+  box-shadow: 0px 0px 13px 3px rgba(112, 112, 112, 0.3);
+}
+
+.socials__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.socials__inner a {
+  padding: 15px;
+  color: #686de0;
+  margin: 0 auto;
+  width: 20px;
+}
+
+.socials__inner a:hover {
+  color: #c3cfe2;
+}
+
+.socials__inner a:hover::after, .socials__inner a:hover::before {
+  font-size: 22px;
+}
+
+.socials .facebook::before {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: normal;
+  content: "\f39e";
+  padding-right: 15px;
+  font-weight: 900;
+  font-size: 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.socials .linkedin::before {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: normal;
+  content: "\f0e1";
+  padding-right: 15px;
+  font-weight: 900;
+  font-size: 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.socials .twitter::before {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: normal;
+  content: "\f09a";
+  padding-right: 15px;
+  font-weight: 900;
+  font-size: 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.socials .github::before {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: normal;
+  content: "\f113";
+  padding-right: 15px;
+  font-weight: 900;
+  font-size: 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.socials .website::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: normal;
+  content: "\f109";
+  padding-right: 15px;
+  font-weight: 900;
+  font-size: 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
 /*# sourceMappingURL=style.css.map */
