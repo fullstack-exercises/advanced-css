@@ -13,21 +13,16 @@
     box-shadow: 0px 0px 13px 3px rgba(112, 112, 112, 0.3);
     &__inner {
         display: flex;
-        justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
         flex-flow: column;
         a {
-            padding: $space;
+            padding: 24px $space;
             color: $color-blue;
             margin: 0 auto;
             width: 20px;
             &:hover {
                 color: $color-grey;
-            }
-            &:hover::after,
-            &:hover::before {
-                font-size: 22px;
             }
         }
     }
@@ -39,7 +34,11 @@
             padding-right: $space;
             font-weight: 900;
             font-size: 20px;
-            transition: all 0.3s ease-in-out;
+            position: absolute;
+            transition: transform 250ms;
+        }
+        &:hover::before {
+            transform: rotateX(180deg);
         }
     }
     .linkedin {
@@ -50,18 +49,26 @@
             padding-right: $space;
             font-weight: 900;
             font-size: 20px;
+            position: absolute;
             transition: all 0.3s ease-in-out;
+        }
+        &:hover::before {
+            transform: rotateX(180deg);
         }
     }
     .twitter {
         &::before {
             font-family: $fontawesome-brands;
             font-weight: normal;
-            content: "\f09a";
+            content: "\f099";
             padding-right: $space;
             font-weight: 900;
             font-size: 20px;
+            position: absolute;
             transition: all 0.3s ease-in-out;
+        }
+        &:hover::before {
+            transform: rotateX(180deg);
         }
     }
     .github {
@@ -72,7 +79,11 @@
             padding-right: $space;
             font-weight: 900;
             font-size: 20px;
+            position: absolute;
             transition: all 0.3s ease-in-out;
+        }
+        &:hover::before {
+            transform: rotateX(180deg);
         }
     }
     .website {
@@ -83,7 +94,11 @@
             padding-right: $space;
             font-weight: 900;
             font-size: 20px;
+            position: absolute;
             transition: all 0.3s ease-in-out;
+        }
+        &:hover::before {
+            transform: rotateX(180deg);
         }
     }
 }

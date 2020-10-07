@@ -11,6 +11,8 @@ body {
   background-color: #c3cfe2;
   font-family: "Quicksand", sans-serif;
   font-size: 16px;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -24,7 +26,7 @@ body {
       grid-template-rows: auto;
   grid-row-gap: 30px;
   grid-column-gap: 30px;
-  padding-top: 30px;
+  padding: 30px;
 }
 
 footer {
@@ -69,6 +71,20 @@ footer {
     -ms-grid-column-span: 1;
     grid-column: 3/4;
   }
+}
+
+header {
+  background: #ffffff;
+  text-align: center;
+  padding: 15px;
+  -webkit-box-shadow: 0px 0px 13px 3px rgba(112, 112, 112, 0.3);
+  box-shadow: 0px 0px 13px 3px rgba(112, 112, 112, 0.3);
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 20px;
+  text-transform: uppercase;
 }
 
 .testimonial {
@@ -209,9 +225,6 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -224,7 +237,7 @@ footer {
 }
 
 .socials__inner a {
-  padding: 15px;
+  padding: 24px 15px;
   color: #686de0;
   margin: 0 auto;
   width: 20px;
@@ -234,10 +247,6 @@ footer {
   color: #c3cfe2;
 }
 
-.socials__inner a:hover::after, .socials__inner a:hover::before {
-  font-size: 22px;
-}
-
 .socials .facebook::before {
   font-family: "Font Awesome 5 Brands";
   font-weight: normal;
@@ -245,8 +254,16 @@ footer {
   padding-right: 15px;
   font-weight: 900;
   font-size: 20px;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  position: absolute;
+  -webkit-transition: -webkit-transform 250ms;
+  transition: -webkit-transform 250ms;
+  transition: transform 250ms;
+  transition: transform 250ms, -webkit-transform 250ms;
+}
+
+.socials .facebook:hover::before {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
 }
 
 .socials .linkedin::before {
@@ -256,19 +273,31 @@ footer {
   padding-right: 15px;
   font-weight: 900;
   font-size: 20px;
+  position: absolute;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+.socials .linkedin:hover::before {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
 }
 
 .socials .twitter::before {
   font-family: "Font Awesome 5 Brands";
   font-weight: normal;
-  content: "\f09a";
+  content: "\f099";
   padding-right: 15px;
   font-weight: 900;
   font-size: 20px;
+  position: absolute;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+.socials .twitter:hover::before {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
 }
 
 .socials .github::before {
@@ -278,8 +307,14 @@ footer {
   padding-right: 15px;
   font-weight: 900;
   font-size: 20px;
+  position: absolute;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+.socials .github:hover::before {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
 }
 
 .socials .website::before {
@@ -289,7 +324,13 @@ footer {
   padding-right: 15px;
   font-weight: 900;
   font-size: 20px;
+  position: absolute;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+.socials .website:hover::before {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
 }
 /*# sourceMappingURL=style.css.map */
